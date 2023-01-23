@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600 &display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
 
 :root {
   --bgColor: #1f1f1f;
@@ -6,7 +6,7 @@
   --lighter-grey: #171717;
   --black: #0f0f0f;
   --white: #eaeaea;
-  --font: "Inter", sans-serif;
+  --font:'Inter', sans-serif;
 }
 
 body {
