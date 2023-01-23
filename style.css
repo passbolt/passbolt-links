@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600 &display=swap');
+
+:root {
+    --bgColor: #1f1f1f;
+    --passbolt-red: #D40101;
+    --lighter-grey: #171717;
+    --black: #0f0f0f;
+    --white: #eaeaea;
+    --font: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--bgColor);
+    background-image: url('background-symbols.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 98vh;
+    justify-content: center;
+}
+
+#passbolt-logo {
+    max-width: 375px;
+    width: 65vw;
+    margin: 40px auto 20px;
+}
+
+#social-link-list {
+    flex-direction: row;
+}
+
+#social-link-list, #recent-link-list  {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+#social-link-list .link, #social-link-list .link i, #recent-link-list .link {
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+}
+
+#recent-link-list .link {
+    color: var(--white);
+    width: auto;
+    background-color: var(--black);
+    border-radius: 10px;
+    font-size: 1rem;
+    display: flex;
+    line-height: 1.5;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 16px 16px rgba(0, 0, 0, 0.2);
+    gap: 20px;
+    justify-content: center;
+    text-align: left;
+}
+
+#social-link-list .link i:hover{
+    color: var(--passbolt-red);
+}
+
+#recent-link-list i, #social-link-list .link i {
+    color: var(--white);
+    font-size: 35px;
+}
+
+#recent-link-list i {
+    font-size: 24px;
+}
+
+#social-link-list .link i {
+    font-size: 35px;
+}
+
+@media only screen and (min-width:640px) {
+    #recent-link-list .link {
+        flex-direction: row;
+    }
+
+    body {
+        background-position: top;
+    }
+}
+
+@media only screen and (max-width:640px) {
+    #recent-link-list .link {
+        width: 80vw;
+        justify-content: left;
+    }
+
+    body {
+        background-position: top;
+    }
+}
+
+#recent-link-list .link:hover {
+    background-color: var(--passbolt-red);
+}
+
+
+#recent-link-list .link:hover i {
+	-webkit-animation: bounce 2.2s;
+	        animation: bounce 2.2s;
+	-webkit-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+            animation-delay: -1s;
+    -webkit-animation-delay: -1s;
+    animation-timing-function: ease;
+}
+
+@-webkit-keyframes bounce {
+	0%, 25%, 50%, 75%, 100% {
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
+	}
+	40% {
+		-webkit-transform: translateY(-15px);
+		        transform: translateY(-15px);
+	}
+	60% {
+		-webkit-transform: translateY(-9px);
+		        transform: translateY(-9px);
+	}
+}
+
+@keyframes bounce {
+	0%, 25%, 50%, 75%, 100% {
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
+	}
+	40% {
+		-webkit-transform: translateY(-15px);
+		        transform: translateY(-15px);
+	}
+	60% {
+		-webkit-transform: translateY(-9px);
+		        transform: translateY(-9px);
+	}
+}
