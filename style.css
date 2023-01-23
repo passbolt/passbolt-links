@@ -12,28 +12,40 @@
 body {
   font-family: var(--font);
   background-color: var(--bgColor);
-  background-image: url("background-symbols.png");
+  background-image: url('./assets/background-icons.svg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: top;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  height: 98vh;
   justify-content: center;
+  overflow: hidden;
 }
+
+header {
+  display: flex;
+  justify-content: center;
+} 
 
 #passbolt-logo {
   max-width: 375px;
   width: 65vw;
-  margin: 40px auto 20px;
+  margin: 0 auto 20px;
 }
 
-#social-link-list {
-  flex-direction: row;
+#heading {
+  font-size: 16px;
+  color: var(--white);
+  font-family: var(--font);
+  text-align: center;
+  margin: 20px auto;
+  width: 65vw;
+  font-weight: 300;
 }
 
-#social-link-list,
-#recent-link-list {
+ul {
   list-style: none;
   padding: 0;
   display: flex;
@@ -42,15 +54,11 @@ body {
   gap: 15px;
 }
 
-#social-link-list .link,
-#social-link-list .link i,
-#recent-link-list .link {
-  position: relative;
-  text-align: center;
+a {
   text-decoration: none;
 }
 
-#recent-link-list .link {
+#recent-links .link {
   color: var(--white);
   width: auto;
   background-color: var(--black);
@@ -66,50 +74,44 @@ body {
   text-align: left;
 }
 
-#social-link-list .link i:hover {
+#social-links .link i:hover {
   color: var(--passbolt-red);
 }
 
-#recent-link-list i,
-#social-link-list .link i {
-  color: var(--white);
-  font-size: 35px;
+#recent-links a:focus {
+  border: 2px solid var(--passbolt-red);
 }
 
-#recent-link-list i {
+i {
+  color: var(--white);
+}
+
+#recent-links i {
   font-size: 24px;
 }
 
-#social-link-list .link i {
+#social-links .link i {
   font-size: 35px;
 }
 
 @media only screen and (min-width: 640px) {
-  #recent-link-list .link {
+  #recent-links .link {
     flex-direction: row;
-  }
-
-  body {
-    background-position: top;
   }
 }
 
 @media only screen and (max-width: 640px) {
-  #recent-link-list .link {
+  #recent-links .link {
     width: 80vw;
     justify-content: left;
   }
-
-  body {
-    background-position: top;
-  }
 }
 
-#recent-link-list .link:hover {
+#recent-links .link:hover {
   background-color: var(--passbolt-red);
 }
 
-#recent-link-list .link:hover i {
+#recent-links .link:hover i {
   -webkit-animation: bounce 2.2s;
   animation: bounce 2.2s;
   -webkit-animation-iteration-count: infinite;
