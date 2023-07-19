@@ -6,11 +6,6 @@
     @media (prefers-color-scheme: light) {
     svg { fill: #171717; }
   }
-  svg {
-    margin: 15px;
-    min-width: 15%;
-    height: auto;
-  }
 </style>
 <path d="M31.7175 14.4764H63.1941V45.9531H31.7175V14.4764ZM33.8075 43.8631H61.1041V16.5664H33.8075V43.8631Z"/>
 <path d="M67.4058 14.4764H98.8824V45.9531H67.4058V14.4764ZM69.4958 43.8631H96.7924V16.5664H69.4958V43.8631Z"/>
